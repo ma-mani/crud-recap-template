@@ -1,15 +1,12 @@
-import Link from "next/link";
+import ItemList from "@/components/ItemList";
 
 export default function Homepage() {
   return (
     <>
-      <h1>Recipes</h1>
-      <p>
-        <Link href="/new">New Recipe</Link>
-      </p>
+      <h1>Travel-Items</h1>
       <section>
-        <h2>All Recipes</h2>
-        <p>This is a list of the current recipes.</p>
+        <h2>What do you need for your trip?</h2>
+        <ItemList></ItemList>
       </section>
     </>
   );

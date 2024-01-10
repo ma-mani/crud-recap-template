@@ -3,7 +3,15 @@ const { Schema, model, models } = mongoose;
 
 const schema = new Schema(
   {
-    title: {
+    name: {
+      type: String,
+      required: true,
+    },
+    quantity: {
+      type: Number,
+      required: true,
+    },
+    description: {
       type: String,
       required: true,
     },
@@ -12,5 +20,5 @@ const schema = new Schema(
   { timestamps: true }
 );
 
-const Recipe = models?.Recipe || model("Recipe", schema);
-export default Recipe;
+const Item = models?.Item || model("Item", schema);
+export default Item;
