@@ -1,3 +1,5 @@
+// pages/[id].js 
+
 import { useRouter } from "next/router";
 import useSWR from "swr";
 
@@ -15,10 +17,12 @@ const ItemDetailsPage = () => {
     return;
   }
   return (
-    <>
-      <h2>{item.name}</h2>
-      <p>Description: {item.description}</p>
-    </>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+      <div style={{ padding: '20px', border: '1px solid #ccc', borderRadius: '5px', marginBottom: '20px', textAlign: 'center' }}>
+        <h2 style={{ color: 'green' }}>{item.name}</h2>
+        <p style={{ fontSize: '1.2em', marginTop: '10px' }}>Description: {item.description}</p>
+      </div>
+    </div>
   );
 };
 
